@@ -30,8 +30,9 @@
     [super viewDidLoad];
     
     DraggableCollectionViewFlowLayout *flowLayout   = [[DraggableCollectionViewFlowLayout alloc]init];
-    flowLayout.itemSize                             = CGSizeMake(100, 140);
-    flowLayout.sectionInset                         = UIEdgeInsetsMake(0, 4, 0, 4);
+    CGFloat sizeWidth                               = ([UIScreen mainScreen].bounds.size.width - 4*10)/3;
+    flowLayout.itemSize                             = CGSizeMake(sizeWidth, sizeWidth*1.4);
+    flowLayout.sectionInset                         = UIEdgeInsetsMake(0, 10, 0, 10);
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     self.collectionView                             = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) collectionViewLayout:flowLayout];

@@ -212,7 +212,7 @@ typedef NS_ENUM(NSInteger, _ScrollingDirection) {
             yd = layoutAttr.center.y - point.y;
         } else {
             // Trying to use layoutAttributesForItemAtIndexPath while section is empty causes EXC_ARITHMETIC (division by zero items)
-            // So we're going to ask for the header instead. It doesn't have to exist.
+            //  cc  So we're going to ask for the header instead. It doesn't have to exist.
             layoutAttr = [self.collectionView.collectionViewLayout layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                                                   atIndexPath:nextIndexPath];
             xd = layoutAttr.frame.origin.x - point.x;

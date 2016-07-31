@@ -21,8 +21,9 @@
     if (self) {
         
         self.imageView                  = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-        self.imageView.backgroundColor  = [UIColor clearColor];
-        [self addSubview:self.imageView];
+        self.imageView.backgroundColor  = [UIColor yellowColor];
+        self.imageView.contentMode      = UIViewContentModeScaleAspectFill;
+        [self.contentView addSubview:self.imageView];
         
     }
     return self;
